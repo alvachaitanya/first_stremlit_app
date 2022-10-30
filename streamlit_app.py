@@ -19,8 +19,8 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 
 try:
-  fruit choice = streamlit.text input ('What fruit would you like information about?')
-  if not fruit choice:
+  fruit_choice = streamlit.text input ('What fruit would you like information about?')
+  if not fruit_choice:
     streamlit.error"Please select a fruit to get information.")
   else:
     fruityvice_response = requests.get ("https://fruityvice.com/api/fruit/" + fruit_choice)
